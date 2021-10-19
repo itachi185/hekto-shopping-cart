@@ -5,9 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hekto - Home Page</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Custom Css Files -->
   <link rel="stylesheet" href="./css/style.css">
@@ -17,6 +25,224 @@
 </head>
 
 <body>
+
+  <!-- Header section starts -->
+
+  <header class="header">
+    <!-- Header top starts -->
+    <div class="header-top">
+      <div class="header-top__container">
+        <div class="header-top__left">
+          <div class="header-top__left-mail">
+            <img src="./images/svg/mail.svg" alt="email" class="header-top__left-icon">
+            <span class="header-top__text">
+              itachi185@gmail.com
+            </span>
+          </div>
+          <div class="header-top__left-phone">
+            <img src="./images/svg/phone-call.svg" alt="phone" class="header-top__left-icon">
+            <span class="header-top__text">
+              (0123)456789
+            </span>
+          </div>
+        </div>
+        <div class="header-top__right">
+          <ul class="header-top__list">
+            <li class="header-top__item">
+              <a href="#" class="header-top__link">English
+                <img src="./images/svg/chevron-down.svg" alt="chevron down" class="header-top__right-icon">
+              </a>
+            </li>
+            <li class="header-top__item">
+              <a href="#" class="header-top__link">USD
+                <img src="./images/svg/chevron-down.svg" alt="chevron down" class="header-top__right-icon">
+              </a>
+            </li>
+            <li class="header-top__item">
+              <a href="#" class="header-top__link">Login
+                <img src="./images/svg/carbon_user.svg" alt="user" class="header-top__right-icon">
+              </a>
+            </li>
+            <li class="header-top__item">
+              <a href="#" class="header-top__link">Wishlist
+                <img src="./images/svg/heart-alt.svg" alt="heart" class="header-top__right-icon">
+              </a>
+            </li>
+          </ul>
+          <div class="header-top__cart">
+            <img src="./images/svg/cart-regular.svg" alt="cart" class="header-top__cart-icon">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header top ends -->
+
+    <!-- Header bottom starts -->
+
+    <div class="header-bottom">
+      <div class="header-bottom__container">
+        <div class="header-bottom__logo">
+          <h2 class="heading-logo header-bottom__logo-text">Hekto</h2>
+        </div>
+
+        <nav class="header-bottom__nav">
+          <div class="header-bottom__nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="header-bottom__nav-list">
+            <li class="header-bottom__nav-item">
+              <a href="./index.html" class="header-bottom__nav-link">Home</a>
+            </li>
+            <li class="header-bottom__nav-item">
+              <a href="#" class="header-bottom__nav-link">Pages</a>
+            </li>
+            <li class="header-bottom__nav-item">
+              <a href="#" class="header-bottom__nav-link">Products</a>
+            </li>
+            <li class="header-bottom__nav-item">
+              <a href="#" class="header-bottom__nav-link">Blog</a>
+            </li>
+            <li class="header-bottom__nav-item">
+              <a href="#" class="header-bottom__nav-link">Shop</a>
+            </li>
+            <li class="header-bottom__nav-item">
+              <a href="#" class="header-bottom__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-bottom__nav-bars">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="header-bottom__search">
+          <input type="text" class="header-bottom__search-input">
+          <div class="header-bottom__search-btn">
+            <img src="./images/svg/search.svg" alt="search icon">
+          </div>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </div>
+
+    <!-- Header bottom ends -->
+
+  </header>
+
+  <!-- Header section ends -->
+
+  <div class="space" style="height: 1000px;"></div>
+
+  <!-- Footer section starts -->
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top__container">
+          <div class="contact">
+            <h2 class="heading-logo u-margin-bottom-medium ">Hekto</h2>
+            <div class="contact__form">
+              <input type="email" placeholder="Enter email address" class="contact__form-input">
+              <div class="contact__form-btn">
+                sign up
+              </div>
+            </div>
+            <div class="contact__info">
+              <p class="contact__info-text">
+                Contact info
+              </p>
+              <p class="contact__info-text">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+            </div>
+          </div>
+          <div class="footer__nav">
+            <h3 class="heading-tertiary u-margin-bottom-medium">Categories</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Laptops & Computers</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Cameras & Photography</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Smart Phones & Tablets</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Video Games & Consoles</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Waterproof Headphones</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <h3 class="heading-tertiary u-margin-bottom-medium">Customer Care</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">My Account</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Discount</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Returns</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Orders History</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Order Tracking</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <h3 class="heading-tertiary u-margin-bottom-medium">Pages</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Blog</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Browse the Shop</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Category</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Pre-Built Pages</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Visual Composer Elements</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">WooCommerce Pages</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom__container">
+          <div class="copyright">
+            &copy;Itachi185 - All Rights Reserved
+          </div>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer section ends -->
 
 </body>
 
