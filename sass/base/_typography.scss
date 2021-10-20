@@ -1,9 +1,27 @@
 .heading-logo {
   font-family: $font-primary;
-  font-size: 3.4rem;
   font-weight: 700;
+  font-size: 3.4rem;
   line-height: 1;
   color: $color-text-dark;
+}
+
+.heading-primary {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 5.3rem;
+  line-height: calc(69.96 / 53);
+  letter-spacing: 0.015em;
+  text-transform: capitalize;
+}
+
+.heading-secondary {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 4.2rem;
+  line-height: 1;
+  color: $color-text;
+  text-transform: capitalize;
 }
 
 .heading-tertiary {
@@ -11,4 +29,24 @@
   font-weight: 600;
   font-size: 2.2rem;
   line-height: 1;
+  text-transform: capitalize;
+}
+
+.paragraph {
+  font-family: $font-text;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: calc(28 / 16);
+}
+
+.color-heading {
+  color: $color-pink;
+}
+
+.color-text {
+  color: $color-text;
+}
+
+.color-sub {
+  color: $color-sub-text;
 }

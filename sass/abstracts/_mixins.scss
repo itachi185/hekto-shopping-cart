@@ -22,6 +22,12 @@
   align-items: center;
 }
 
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+}
+
+/////////////////////////////////
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

@@ -1,0 +1,30 @@
+.btn {
+  color: $color-white;
+  padding: 1.6rem 4rem;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  display: inline-block;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  transition: $smooth;
+
+  &:hover {
+    background-color: $color-blue;
+  }
+
+  &--pink {
+    background-color: $color-pink;
+  }
+
+  &--green {
+    background-color: $color-green;
+    padding: 0.8rem 1.3rem;
+    font-size: 1.2rem;
+    line-height: calc(14.06 / 12);
+  }
+}

@@ -13,19 +13,19 @@
 
         margin-right: 7rem;
 
-        &__form {
+        &-form {
           @include flexAItemsCenter;
           position: relative;
           background-color: $color-white;
-          max-width: 377px;
+          max-width: 475px;
           margin-bottom: 2.5rem;
           border-radius: 3px;
 
-          &-input {
+          &__input {
             font-family: $font-text;
             border: none;
             padding: 1.2rem 2rem;
-            width: 100%;
+            width: calc(100% - 157px);
             font-size: 1.6rem;
             color: $color-sub-text;
             border-radius: 3px;
@@ -37,7 +37,7 @@
             }
           }
 
-          &-btn {
+          &__btn {
             position: absolute;
             top: 50%;
             right: 0.2rem;
@@ -49,6 +49,8 @@
             font-size: 1.6rem;
             line-height: calc(18.75 / 16);
             border-radius: 3px;
+            border: none;
+            cursor: pointer;
           }
         }
 
@@ -64,18 +66,18 @@
         }
       }
 
-      .footer__nav {
+      .footer-nav {
         flex: 1 1 20rem;
 
-        &-item:not(:last-child) {
+        &__item:not(:last-child) {
           margin-bottom: 2.1rem;
         }
 
-        &-link {
+        &__link {
           font-size: 1.6rem;
           line-height: calc(19.2 / 16);
           color: $color-sub-text;
-          transition: all 0.2s;
+          transition: $fast;
 
           &:hover {
             color: $color-pink;
@@ -95,7 +97,7 @@
           margin-right: 0;
         }
 
-        .footer__nav {
+        .footer-nav {
           flex: 1 1 calc(50% - #{$gap});
         }
       }
@@ -112,7 +114,7 @@
           }
         }
 
-        .footer__nav {
+        .footer-nav {
           flex: 1 1 100%;
         }
       }

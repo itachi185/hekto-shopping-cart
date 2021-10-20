@@ -7,12 +7,12 @@
 @import "base/base";
 @import "base/animations";
 
+@import "layout/header";
 @import "layout/navigation";
 @import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
 @import "layout/sidebar";
 @import "layout/forms";
+@import "layout/footer";
 
 @import "components/buttons";
 @import "components/carousel";

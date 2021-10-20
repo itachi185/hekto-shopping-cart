@@ -4,6 +4,7 @@
   font-weight: 600;
   line-height: 1;
   color: $color-text-light;
+  background-color: $color-white;
   position: fixed;
   top: 0;
   left: 0;
@@ -101,6 +102,7 @@
     }
 
     &__logo-text {
+      display: inline-block;
       margin-right: 8.8rem;
     }
 
@@ -126,7 +128,7 @@
         color: $color-text-dark;
         padding: 1rem 0;
         display: inline-block;
-        transition: all 0.2s;
+        transition: $fast;
 
         &:hover {
           color: $color-pink;
@@ -154,7 +156,7 @@
         font-size: 1.6rem;
 
         &:focus {
-          border-color: #afadc2;
+          border-color: $color-pink;
         }
       }
 
@@ -198,7 +200,7 @@
         height: 100%;
         background-color: $color-white;
         z-index: 1000;
-        transition: all 0.3s ease-in-out;
+        transition: $smooth;
 
         &-list {
           flex-direction: column;

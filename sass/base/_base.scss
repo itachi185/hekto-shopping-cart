@@ -19,11 +19,6 @@ html {
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
 
-  // @include respond(phone) {
-  //   // width < 900?
-  //   font-size: 37.5%; //1 rem = 8px, 8/16 = 50%
-  // }
-
   @include respond(big-desktop) {
     // width >= 1800?
     font-size: 75%; //1rem = 12, 12/16
@@ -39,4 +34,11 @@ body {
 
 .container {
   @include container;
+}
+
+@include respond(phone) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
