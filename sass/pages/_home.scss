@@ -15,6 +15,55 @@
   transition: $smooth;
 }
 
+%card__icon-horizontal {
+  position: absolute;
+  bottom: 3rem;
+  left: 1.5rem;
+  @include flexItemsCenter;
+  flex-direction: column;
+  opacity: 0;
+  visibility: visible;
+}
+
+.category {
+  &__list {
+    @include flexItemsCenter;
+    flex-wrap: wrap;
+    margin-bottom: 5.8rem;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 5.8rem;
+    }
+  }
+
+  &__link:hover {
+    color: $color-pink;
+    border-bottom: 1px solid $color-pink;
+  }
+
+  @include respond(phone) {
+    &__list {
+      @include flexItemsCenter;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 4rem;
+    }
+
+    &__item {
+      flex: 1 1 100%;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+////////////////////////////////
 // Hero section
 .hero {
   background-color: $color-bg-1;
@@ -96,7 +145,8 @@
   }
 
   &-card {
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-card-2;
+    background-color: $color-white;
     display: flex;
     flex-direction: column;
 
@@ -227,20 +277,6 @@
       line-height: calc(16.8 / 14);
       color: $color-text;
     }
-
-    @include respond(tab-port) {
-      &__head-img {
-        transform: scale(0.8);
-      }
-
-      .featured-card {
-        &__btn,
-        &__icons {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
   }
 
   &-dots {
@@ -262,37 +298,34 @@
       }
     }
   }
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+
+    &-card__head-img {
+      transform: scale(0.8);
+    }
+
+    .featured-card {
+      &__btn,
+      &__icons {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &__icons {
+        left: auto;
+        right: 1rem;
+      }
+    }
+  }
 }
 
 ////////////////////////////////////
 // Leatest products
 .leatest {
-  .category {
-    &__list {
-      @include flexItemsCenter;
-      flex-wrap: wrap;
-      margin-bottom: 5.8rem;
-    }
-
-    &__item {
-      &:not(:last-child) {
-        margin-right: 5.8rem;
-      }
-    }
-
-    &__link {
-      font-size: 1.8rem;
-      line-height: calc(21.6 / 18);
-      color: $color-text;
-      text-transform: capitalize;
-      padding-bottom: 1px;
-
-      &.active,
-      &:hover {
-        color: $color-pink;
-        border-bottom: 1px solid $color-pink;
-      }
-    }
+  &__list {
+    margin-bottom: 5.8rem;
   }
 
   &-products {
@@ -397,17 +430,23 @@
         font-size: 1.2rem;
       }
     }
+  }
 
-    @include respond(tab-port) {
-      &__head-img {
-        transform: scale(0.8);
-      }
+  @include respond(tab-port) {
+    &-products {
+      grid-row-gap: 4.8rem;
+    }
 
-      .leatest-card {
-        &__icons {
-          opacity: 1;
-          visibility: visible;
-        }
+    &-card__head-img {
+      transform: scale(0.8);
+    }
+
+    .leatest-card {
+      &__icons {
+        left: auto;
+        right: 1.5rem;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -434,7 +473,7 @@
 
     &-products {
       @include grid(280px);
-      grid-row-gap: 5rem;
+      grid-row-gap: 4rem;
     }
 
     &-card__head {
@@ -446,14 +485,16 @@
 ////////////////////////////////
 // Service
 .service {
+  margin-bottom: 13.5rem;
+
   &-card {
     @include grid(270px);
     gap: 2.8rem;
-    margin-bottom: 13.5rem;
 
     &__item {
       @include flexItemsCenter;
-      box-shadow: $box-shadow;
+      box-shadow: $box-shadow-card-2;
+      background-color: $color-white;
       flex-direction: column;
       padding: 4.5rem 2.6rem;
     }
@@ -464,6 +505,501 @@
 
     &__text {
       text-align: center;
+    }
+  }
+
+  @include respond(tab-port) {
+    margin-bottom: 8rem;
+  }
+}
+
+////////////////////////////////////
+// Unique product
+.unique-product {
+  background-color: $color-bg-4;
+
+  &__container {
+    @include flexAItemsCenter;
+    padding: 1.5rem 6rem;
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    line-height: calc(46.2 / 35);
+    letter-spacing: 0.015em;
+    margin-bottom: 2.9rem;
+  }
+
+  &__desc {
+    margin-bottom: 3.8rem;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: calc(21.12 / 16);
+    letter-spacing: 0.015em;
+    margin-right: 12rem;
+    display: flex;
+    align-items: baseline;
+
+    &:not(:last-child) {
+      margin-bottom: 1.3rem;
+    }
+
+    &-note {
+      flex-shrink: 0;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: block;
+      margin-right: 1.2rem;
+
+      &--1 {
+        background-color: #f52b70;
+      }
+
+      &--2 {
+        background-color: #2b2bf5;
+      }
+
+      &--3 {
+        background-color: #2bf5cc;
+      }
+    }
+  }
+
+  &__cta {
+    @include flexAItemsCenter;
+  }
+
+  &__info {
+    margin-left: 1.9rem;
+
+    &--name,
+    &--price {
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: $color-text;
+    }
+
+    &--name {
+      margin-bottom: 3px;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 1.5rem 0;
+
+    &__container {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__text {
+      margin-right: 0;
+    }
+
+    &__cta {
+      justify-content: center;
+    }
+  }
+
+  @include respond(phone) {
+    &__container {
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+//////////////////////////////////
+// Trending products
+.trending-products {
+  padding: 13rem 0;
+
+  .product-card {
+    &__container {
+      @include grid(270px);
+      gap: 2.9rem;
+      margin-bottom: 4rem;
+    }
+
+    &__item {
+      box-shadow: $box-shadow-card-2;
+      display: flex;
+      flex-direction: column;
+      padding: 1.1rem 1.1rem 3.2rem;
+      background: linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+
+      &:hover {
+        .product-card__img {
+          transform: scale(0.8);
+        }
+
+        .product-card {
+          &__icons {
+            opacity: 1;
+            visibility: visible;
+            animation: fadeUp 0.3s linear;
+          }
+        }
+      }
+    }
+
+    &__head {
+      flex: 1;
+      @include flexItemsCenter;
+      padding: 4rem 3.5rem 3.2rem;
+      margin-bottom: 1.5rem;
+      background-color: $color-bg-card-3;
+      position: relative;
+    }
+
+    &__img {
+      transition: $smooth;
+    }
+
+    &__icons {
+      @extend %card__icon-horizontal;
+
+      &--item {
+        @extend %card__icon;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        &:hover {
+          background-color: $color-bg-2;
+        }
+
+        i {
+          color: $color-blue;
+        }
+      }
+    }
+
+    &__content {
+      @include flexItemsCenter;
+      flex-direction: column;
+    }
+
+    &__heading {
+      line-height: calc(25.6 / 16);
+    }
+
+    &__price {
+      @include flexItemsCenter;
+      margin-top: 0.8rem;
+
+      .paragraph {
+        font-family: $font-primary;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      &--2 {
+        margin-left: 1.2rem;
+        font-size: 1.2rem;
+        text-decoration: line-through;
+        color: rgba($color-text, 0.3);
+      }
+    }
+  }
+
+  .product-sale {
+    @include flexAItemsCenter;
+    gap: 2.9rem;
+    flex-wrap: wrap;
+
+    &__view {
+      flex: 1 1 420px;
+      min-height: 270px;
+      position: relative;
+
+      &--1 {
+        background-color: $color-pink-light;
+      }
+
+      &--2 {
+        background-color: $color-blue-light;
+      }
+    }
+
+    &__head {
+      padding: 3.4rem 2.5rem;
+    }
+
+    &__link {
+      margin-top: 1.1rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      display: inline-block;
+    }
+
+    &__img {
+      position: absolute;
+      right: 0.8rem;
+      bottom: 0;
+    }
+
+    &__item {
+      flex: 1 1 267px;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-row-gap: 2rem;
+      min-height: 270px;
+
+      &-box {
+        @include flexAItemsCenter;
+      }
+
+      &-img {
+        background-color: $color-bg-card-3;
+        padding: 0 2.1rem;
+        margin-right: 0.9rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-price {
+        text-decoration: line-through;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+
+    .product-card {
+      &__item:hover .product-card__img {
+        transform: scale(1);
+      }
+
+      &__icons {
+        left: auto;
+        right: 1.5rem;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    .product-sale__item-img {
+      width: 50%;
+    }
+  }
+}
+
+////////////////////////////////
+// Discount item
+.discount-item {
+  .category__list {
+    margin-bottom: 4rem;
+  }
+
+  &__container {
+    @include flexAItemsCenter;
+    flex-wrap: wrap;
+    padding: 0 1.4rem;
+  }
+
+  &__content,
+  &__image {
+    flex: 1 1 45rem;
+  }
+
+  &__check {
+    margin-bottom: 3.7rem;
+    @include grid(200px);
+    grid-row-gap: 1rem;
+
+    &-box {
+      @include flexAItemsCenter;
+    }
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: calc(46.2 / 35);
+    letter-spacing: 0.015em;
+  }
+
+  &__check-text,
+  &__text {
+    font-weight: 400;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.02em;
+  }
+
+  &__text {
+    margin: 2rem 0 2.8rem;
+    padding-right: 10rem;
+  }
+
+  &__img {
+    @include imageCover;
+  }
+
+  @include respond(tab-port) {
+    &__content {
+      flex-basis: 100%;
+    }
+
+    &__btn {
+      text-align: center;
+    }
+
+    &__text {
+      padding-right: 0;
+    }
+  }
+}
+
+////////////////////////////////
+// Top categories
+.top-categories {
+  padding: 8rem 0 12.5rem;
+
+  &__container {
+    @include grid(265px);
+    gap: 3.9rem;
+    margin-bottom: 3.8rem;
+  }
+
+  .categories-card {
+    &:hover {
+      .categories-card {
+        &__behind {
+          opacity: 1;
+        }
+
+        &__image {
+          transform: translate(5px, -5px);
+        }
+
+        &__btn {
+          opacity: 1;
+          visibility: visible;
+          animation: fadeUp 0.3s linear;
+        }
+      }
+    }
+
+    &__head {
+      position: relative;
+    }
+
+    &__behind {
+      width: 100%;
+      height: 100%;
+      background-color: #9877e7;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: $smooth;
+    }
+
+    &__image {
+      flex: 1;
+      @include flexItemsCenter;
+      flex-direction: column;
+      background-color: $color-bg-card-1;
+      border-radius: 50%;
+      padding: 4.5rem;
+      min-height: 265px;
+      box-shadow: $box-shadow-card-2;
+      position: relative;
+      z-index: 10;
+      transition: $smooth;
+    }
+
+    &__img {
+      @include imageCover;
+      transition: $smooth;
+    }
+
+    &__btn {
+      display: block;
+      position: absolute;
+      bottom: 2rem;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &__content {
+      text-align: center;
+    }
+
+    &__name {
+      margin: 2.7rem 0 1.3rem;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    &__price {
+      font-family: $font-primary;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+  .categories-dots {
+    @include flexItemsCenter;
+
+    &__item {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $color-pink;
+
+      &:not(:last-child) {
+        margin-right: 1.2rem;
+      }
+
+      &.active {
+        background-color: $color-pink;
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    .categories-card {
+      &__behind {
+        opacity: 1;
+      }
+
+      &__image {
+        transform: translate(5px, -5px);
+      }
+
+      &__btn {
+        opacity: 1;
+        visibility: visible;
+        animation: fadeUp 0.3s linear;
+      }
     }
   }
 }

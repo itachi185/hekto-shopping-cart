@@ -30,6 +30,7 @@
   font-size: 2.2rem;
   line-height: 1;
   text-transform: capitalize;
+  color: $color-text;
 }
 
 .paragraph {
@@ -39,7 +40,7 @@
   line-height: calc(28 / 16);
 }
 
-.color-heading {
+.color--pink {
   color: $color-pink;
 }
 
@@ -49,4 +50,33 @@
 
 .color-sub {
   color: $color-sub-text;
+}
+
+.font-text-primary {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+%link {
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: calc(21.6 / 18);
+  text-transform: capitalize;
+}
+
+.link-normal {
+  @extend %link;
+}
+
+.link-underline {
+  @extend %link;
+  padding-bottom: 1px;
+  border-bottom: 1px solid $color-pink;
 }

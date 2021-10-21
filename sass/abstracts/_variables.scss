@@ -1,6 +1,5 @@
-// FONTS
-$font-primary: Josefin Sans, sans-serif;
-$font-text: Lato, sans-serif;
+$font-primary: "Josefin Sans", sans-serif;
+$font-text: "Lato", sans-serif;
 
 $color-text: #151875;
 $color-sub-text: #8a8fb9;
@@ -15,19 +14,21 @@ $color-red: #fb2448;
 $color-purple: #7e33e0;
 $color-blue: #2f1ac4;
 $color-green: #08d15f;
+$color-pink-light: #fff6fb;
+$color-blue-light: #eeeffb;
 
 $color-bg-1: #f2f0ff;
 $color-bg-2: #eeeffb;
 $color-bg-3: #e7e4f8;
+$color-bg-4: #f1f0ff;
 
 $color-bg-card-1: #f6f7fb;
 $color-bg-card-2: #f7f7f7;
+$color-bg-card-3: #f5f6f8;
 
-$color-off-navy-blue: #3f509e;
-$color-sky-blue: #f3f9ff;
-$color-off-purple: #9f63b5;
-$color-patone-purple: #e0d3f5;
+$box-shadow: 0 0.5px 25px rgba(0, 0, 0, 0.1);
+$box-shadow-card-1: 0px 0px 25px rgba(0, 0, 0, 0.1);
+$box-shadow-card-2: 0px 8px 40px rgba(49, 32, 138, 0.05);
 
-$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 $smooth: all 0.3s ease-in;
 $fast: all 0.2s ease-out;
