@@ -69,6 +69,7 @@
   font-size: 1.8rem;
   line-height: calc(21.6 / 18);
   text-transform: capitalize;
+  color: $color-text;
 }
 
 .link-normal {
@@ -78,5 +79,10 @@
 .link-underline {
   @extend %link;
   padding-bottom: 1px;
-  border-bottom: 1px solid $color-pink;
+  border-bottom: 1px solid $color-text;
+
+  &.active {
+    color: $color-pink;
+    border-color: $color-pink;
+  }
 }

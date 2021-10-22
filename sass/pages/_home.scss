@@ -986,20 +986,150 @@
   }
 
   @include respond(tab-port) {
+    padding: 8rem 0;
+
     .categories-card {
-      &__behind {
-        opacity: 1;
-      }
-
-      &__image {
-        transform: translate(5px, -5px);
-      }
-
       &__btn {
         opacity: 1;
         visibility: visible;
         animation: fadeUp 0.3s linear;
       }
     }
+  }
+}
+
+//////////////////////////////////
+// Newslater banner
+.newslater-banner {
+  background-image: url(../../images/newslater-banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content {
+    padding: 17.4rem 30rem 10.3rem;
+    @include flexItemsCenter;
+    flex-direction: column;
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    line-height: calc(54.25 / 35);
+    letter-spacing: 0.015em;
+  }
+
+  @include respond(tab-port) {
+    &__content {
+      padding: 17.4rem 16rem 10.3rem;
+    }
+  }
+
+  @include respond(phone) {
+    &__content {
+      padding: 15rem 0 8rem;
+    }
+  }
+}
+
+//////////////////////////////////
+// Brand section
+.brand {
+  margin: 9.6rem 0;
+
+  &__image {
+    @include flexItemsCenter;
+  }
+
+  @include respond(tab-port) {
+    margin: 8rem 0;
+  }
+}
+
+////////////////////////////////
+// Leatest blog section
+.blog {
+  margin-bottom: 11.5rem;
+
+  &__container {
+    @include grid(350px);
+    gap: 5.6rem;
+  }
+
+  &__item {
+    background-color: $color-white;
+    box-shadow: $box-shadow-card-2;
+    border-radius: 5px;
+    perspective: 1px;
+    overflow: hidden;
+    @include flexAItemsCenter;
+    flex-direction: column;
+
+    &:hover {
+      .blog__img {
+        transform: scale(1.1);
+      }
+
+      .blog__heading,
+      .blog__link {
+        color: $color-pink;
+      }
+
+      .blog__link {
+        border-color: $color-pink;
+      }
+    }
+  }
+
+  &__head {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__img {
+    @include imageCover;
+    transition: $smooth;
+  }
+
+  &__content {
+    padding: 1.9rem 1.9rem 3.5rem;
+  }
+
+  &__title {
+    @include flexAItemsCenter;
+    margin-bottom: 3.1rem;
+
+    &--icon {
+      margin-right: 0.8rem;
+    }
+
+    &--text {
+      font-family: $font-primary;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+  &__author,
+  &__date {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__author {
+    margin-right: 2.9rem;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__desc {
+    margin: 1.7rem 0 1.4rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: calc(30 / 16);
   }
 }
